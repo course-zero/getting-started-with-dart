@@ -15,10 +15,12 @@ void main() {
 
   // runtime constant
   // const VAL = getSquare( 2 ); :=> INVALID
-  final num VAL = getSquare( 2 );
+  final num square_2 = getSquare( 2 );
+  final square_3 = getSquare( 3 ); // without data type
 
   print("PI: $PI");
-  print("VAL: $VAL");
+  print("square_2: $square_2");
+  print("square_3: $square_3");
 }
 
 // return square of a number
