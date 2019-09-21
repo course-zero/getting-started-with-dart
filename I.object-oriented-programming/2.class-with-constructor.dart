@@ -1,5 +1,5 @@
 /**
- * A constructor function of the class is implicitely called by the Dart when an object is created from it.
+ * A constructor function of the class is implicitly called by the Dart when an object is created from it.
  * The default constructor method has the same name as the class.
  * 
  * A constructor function is generally used to initialize instance variables,
