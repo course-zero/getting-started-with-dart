@@ -1,6 +1,8 @@
 /**
- * `continue` keyword in Dart `switch` statement to
- * execute multiple cases
+ * A switch statement in Dart executed only one case block.
+ * But using `continue` keyword, we can manually execute another case block.
+ * The block which calls another case block using `continue` keyword,
+ * must not terminate using `break` or `return` keywords.
  */
 void main() {
   var size = 'LARGE'; // `LARGE` size gets free `SMALL`size
