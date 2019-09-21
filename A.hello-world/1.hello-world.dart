@@ -1,7 +1,5 @@
-/**
- * This is a simple "Hello World" example.
- * Here, we will print `Hello World` text in the terminal.
- */
+// `main` function is the entry point of execution
+// when a .dart file is executed using `dart` command
 void main() {
-  print( "Hello World" ); // print is built-in function
+  print( "Hello World" ); // print is built-in function to print an object to the STDOUT
 }
