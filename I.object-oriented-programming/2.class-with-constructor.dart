@@ -1,6 +1,9 @@
 /**
- * A constructor is an instance method that is invoked
- * when an object is created from the class.
+ * A constructor function of the class is implicitely called by the Dart when an object is created from it.
+ * The default constructor method has the same name as the class.
+ * 
+ * A constructor function is generally used to initialize instance variables,
+ * with values passed by the user while creating an object. 
  */
 void main() {
 
@@ -12,8 +15,12 @@ void main() {
 
 // simple Persona class with constructor
 class Person {
-  String firstName, lastName; // instance variables with `null` value
-  int age; // instance variable with `null` value
+  
+  // instance variables with `null` value
+  String firstName, lastName;
+  
+  // instance variable with `null` value
+  int age;
 
   // constructor function
   Person( String firstName, String lastName, [ int age = 18 ] ) {
