@@ -20,7 +20,7 @@ class Person {
   // named constructor: initWithUpperCase
   Person.initWithUpperCase( String firstName, String lastName, [ int age = 18 ] ) {
     this.firstName = firstName.toUpperCase();
-    this.lastName = lastName.toUpperCase();;
+    this.lastName = lastName.toUpperCase();
     this.age = age;
   }
 
