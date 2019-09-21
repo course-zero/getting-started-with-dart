@@ -1,7 +1,10 @@
 /**
- * Dart function has lexical scope which a nested function has access
- * to the scope of its parent. While like JavaScript, Dart creates closures
- * to hold variables from the outer scope that a function depends on.
+ * Dart functions have lexical scope which means a function has access to the variable defined in
+ * the upper scopes. When a function is nested inside another function, inner function has
+ * access to the variables defined in the parent function.
+ *
+ * Like JavaScript, Dart creates `closures` to hold variables from the outer scope
+ * that the function depends on.
  */
 void main() {
 
@@ -9,7 +12,7 @@ void main() {
   // variable `name` is accessible inside `getUpperCase`
   var name = 'Ross Geller';
   var getUpperCase = () {
-    print( name.toUpperCase() ); // `name` is access from upper scope(s)
+    print( name.toUpperCase() ); // `name` is accessed from upper scope(s)
   };
 
   // example of closure
@@ -23,7 +26,7 @@ void main() {
   getUpperCase();
 
   // closure
-  var addTwo = addANumber( 2 );
+  var addTwo = addANumber( 2 ); // `addANumber` function is returned
   print("addTwo(3) :=> ${addTwo(3)}");
 
 }
