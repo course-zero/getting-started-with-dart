@@ -9,11 +9,11 @@ import 'dart:io';
  */
 void main() {
   
-  // [parent]
+  // [parent] for loop
   for( var i = 0; i < 10; i++ ) {
     stdout.write( "Parent iteration $i: " ); // always prints for each iteration of `parent` loop
     
-    // [child]
+    // [child] for-in loop
     for ( var side in [ 'LEFT', 'RIGHT' ] ) {
       if( side == 'LEFT' ) {
         continue; // skip iteration of `child` loop when `side` is `LEFT`
