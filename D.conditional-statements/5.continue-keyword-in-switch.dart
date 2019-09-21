@@ -1,5 +1,5 @@
 /**
- * A switch statement in Dart executed only one case block.
+ * A switch statement in Dart executed only one `case` block.
  * But using `continue` keyword, we can manually execute another case block.
  * The block which calls another case block using `continue` keyword,
  * must not terminate using `break` or `return` keywords.
