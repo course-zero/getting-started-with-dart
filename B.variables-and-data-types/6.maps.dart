@@ -11,7 +11,7 @@ void main() {
   var myMap = new Map(); // creates a Map of `dynamic` keys and `dynamic` values
   
   // creates a map with `int` keys and `String` values
-  var fingers = new Map<int,String>(); // or `Map<int,String>() fingers = ...` declaration
+  var fingers = new Map<int,String>(); // or `Map<int,String>() fingers = new Map();` declaration
   
   // assign values to the keys
   fingers[1] = 'THUMB'; // 1 is not an index, its a key
