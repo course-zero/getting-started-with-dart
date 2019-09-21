@@ -20,7 +20,7 @@ void main() {
   
 }
 
-// Person object contains basic personal details
+// A `Person` object contains basic personal details
 // Since `Person` is abstract, it can not be instantiated
 abstract class Person {
   
