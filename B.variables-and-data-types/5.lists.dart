@@ -1,31 +1,47 @@
 /**
- * Dart provides `List` class to create Array-like data structure.
- * new List(n) => List of fixed `n` size.
- * new List<int>(n) => List of integers with fixed `n` size.
- * new List() => Growable list of infinite size.
- * ['A', 'B'] => Growable list with initial values.
+ * Dart provides `List` class to create an Array-like data structure.
+ * Dart lists can be fixed in length or growable depending on how it was declared.
+ * Dart lists can hold data of a fixed Data Type or data of any data type, also depending on how it was declared.
+ *
+ *
+ * new List(n)         => List of fixed `n` size that can hold elements of dynamic Data Type
+ * new List<int>(n)    => List of fixed `n` size that can hold elements of `int` Data Type only
+ * new List()          => Growable list of infinite size that can hold elements of dynamic Data Type
+ * ['A', 'B']          => Literal expression to declare a growable list with initial values.
  */
 void main() {
 
-  // list of `dynamic` data type of size 3
-  List fixedDynamicList = new List(3);
-  // SAME AS :=> List<dynamic> fixedDynamicList = new List<dynamic>(3);
-  fixedDynamicList[0] = 1;
-  fixedDynamicList[1] = 'HELLO';
-  print( fixedDynamicList );
-  print( "fixedDynamicList[1] => ${ fixedDynamicList[1] }\n" );
+  // list of fixed length (below lists contain 3 exact elements)
+  List<dynamic> fixedList = new List(3); // `List<dynamic> fixedDynamicList` is same as `List fixedDynamicList`
+  List<num> fixedNumList = new List(3); // can contain elements of `num`, `int` or `double`
+  
+  // list with fixed length contains null objects
+  print( fixedList ); // [ null, null, null ]
+  
+  // override a value of an element in the list 
+  fixedList[1] = 'HELLO'; // override value at index 1
+  
+  print( fixedList );
+  
+  /************************/
 
-  // list of `String` data type of growable size
-  List growableStringList = new List<String>();
-  growableStringList.add( "Orange" );
-  growableStringList.add( "Apple" );
-  // growableStringList.add( 1 ); :=> INVALID data type
-  // print( "growableStringList[10] => ${ growableStringList[1] }" ); //=> INVALID: Not in range
+  // growable lists are defined without any argument in `List()` constructor
+  List<String> growableStringList = new List();
+  growableStringList.add( "Orange" ); // add element to growableStringList
+  growableStringList.add( "Apple" ); // add element to growableStringList
+  // growableStringList.add( 1 ); // invalid operation as `1` is not a `String` type value
+  
+  // override a value at an existing index
+  growableStringList[1] = 'Mango';
+
   print( growableStringList );
-  print( "growableStringList[1] => ${ growableStringList[1] }\n" );
-
-  // list of `dynamic` data type of growable size with inial value
-  var growableDynamicList = [ 1, "Hello" ];
+  
+  /************************/
+  
+  // declaring a growable list with initial values using List literal syntax
+  var growableDynamicList = [ 1, "Hello" ]; // creates a List that can hold objects of any type
+  var growableDoubleList = [ 1.0, 2.1 ]; // creates a List that can hold only `double` values
+  
   growableDynamicList.add( "World" );
   print( "growableDynamicList => ${ growableDynamicList }" );
   print( "growableDynamicList.length => ${ growableDynamicList.length }" );
