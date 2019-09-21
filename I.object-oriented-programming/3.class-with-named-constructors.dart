@@ -1,6 +1,14 @@
 /**
- * A named constructor should is defined with `Class.constructorName`
- * instance method.
+ * Dart supports having multiple constructor functions in a class.
+ * But only one default constructor function is allowed which will be called implicitly.
+ * Other constructor function must be registered with `MyClass.constructorName() {}` syntax.
+ *
+ * While creating an object, we can specify a constructor function using below syntax.
+ * -> var obj = new MyClass.constructorName();
+ *
+ * When it comes to a constructor function whose only job is to initialize instance variables,
+ * Dart provides an easier syntax to write default or named constructor function.
+ * -> MyClass( this.instVarOne, this.instVarTwo, [ this.instVarThree = 'DefaultVal' ] );
  */
 void main() {
 
@@ -9,10 +17,14 @@ void main() {
   print( "Full name: ${ ross.getFullName() }" );
 }
 
-// simple Persona class with constructor
+// simple Person class with multiple constructor functions
 class Person {
-  String firstName, lastName; // instance variables with `null` value
-  int age; // instance variable with `null` value
+  
+  // instance variables with `null` value
+  String firstName, lastName;
+  
+  // instance variable with `null` value
+  int age;
 
   // default constructor function
   Person( this.firstName, this.lastName, [ this.age = 18 ] );
@@ -26,6 +38,6 @@ class Person {
 
   // instance methods
   String getFullName() {
-    return this.firstName + " " + this.lastName; // `this` points to the object itself
+    return this.firstName + " " + this.lastName;
   }
 }
