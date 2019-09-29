@@ -19,6 +19,8 @@ void main() {
 		var pathParts = path.split( '/' );
 		var pathBaseName = pathParts[ pathParts.length - 1 ];
 		var displayFileName = pathBaseName.substring( 2 );
+    var displayTitle = displayFileName.split( '.' )[ 0 ].replaceAll( "-" , " ");
+    var displayTitleCleaned = displayTitle[ 0 ].toUpperCase() + displayTitle.substring( 1 );
 
 		// create snippet image using catage
 		Process.start(
@@ -28,10 +30,14 @@ void main() {
 				'${ path }.png',
 				'--execute',
 				'dart __FILE__', 
+				'--language',
+				'dart',
+				'--theme',
+				'Material',
 				'--display-command',
 				'dart ${ displayFileName }',
 				'--frame-title',
-				'${ displayFileName.split( '.' )[ 0 ] }'
+				'${ displayTitleCleaned }'
 			],
 			mode: ProcessStartMode.inheritStdio
 		).then( ( process ) {
