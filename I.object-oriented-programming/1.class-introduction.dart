@@ -39,13 +39,19 @@ class Person {
     return this.firstName + " " + this.lastName; // `this` points to the object itself
   }
 
+  // static method
+  static String info() {
+    return 'This is a Person class';
+  }
+
   // `toString` instance method to print string representation of the object
   // it overrides `toString` method defined in `Object` class
   @override
   String toString() {
     
-    // since `company` is a static variable, it should be accessed on `Person` class
-    return "Name: ${ this.getFullName() }, Age: ${ this.age }, Company: ${ Person.company }";
+    // since `company` is a static variable, it should be accessed on `Person` class (like: Person.company)
+    // though in Dart, all static variables and methods are accessible by their names directly in static or instance methods
+    return "Name: ${ this.getFullName() }, Age: ${ this.age }, Company: ${ company }, Info: ${ info() }";
   }
   
 }

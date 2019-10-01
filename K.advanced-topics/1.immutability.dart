@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 
 /**
- * @desc `@immutable` annotation from `meta` package forces a class to become immutable.
+ * `@immutable` annotation from `meta` package forces a class to become immutable.
  * 
  * A class is `immutable` if all of the instance fields of the class,
  * whether defined directly or inherited, are `final`.
@@ -20,7 +20,7 @@ void main() {
   var u = User( 'John' );
   
   // override name property
-  //u.name = 'Mike'; // not allowed because `User` is `immutable`
+  //u.name = 'Mike'; // not allowed because `User` is `immutable`.
   
   // print name property
   print( u.name );
