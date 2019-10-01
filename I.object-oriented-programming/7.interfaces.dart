@@ -8,6 +8,10 @@
  *
  * Like inheritance, constructor function and static properties
  * is not a part of implicit interface created by a class.
+ * 
+ * TIPS:
+ * 1. If a sub-class `extends` an `abstract` super-class with methods lacking body signature,
+ *    these methods must be implemented in the sub-class.
  */
 void main() {
   // create Employee object
