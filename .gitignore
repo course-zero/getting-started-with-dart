@@ -1,3 +1,4 @@
 .packages
 .dart_tool
 *.png
+__test__.dart

@@ -10,6 +10,11 @@
  *
  * `this` keyword inside an instance method points to the object itself.
  * `@override` annotation is used to mark a method that is overriding the method defined in the inherited class.
+ * 
+ * 🔥 TIPS:
+ * 1. All static variables and methods are accessible by their names directly in static or instance methods.
+ * 2. All instance variables and methods are accessible by their names directly in instance methods.
+ * 3. It is recommended to use `this` to remove ambiguity between function parameters and static/instance variables.
  */
 void main() {
 
@@ -49,9 +54,8 @@ class Person {
   @override
   String toString() {
     
-    // since `company` is a static variable, it should be accessed on `Person` class (like: Person.company)
-    // though in Dart, all static variables and methods are accessible by their names directly in static or instance methods
-    return "Name: ${ this.getFullName() }, Age: ${ this.age }, Company: ${ company }, Info: ${ info() }";
+    // since `company` is a static variable, it should be accessed on `Person` class
+    return "Name: ${ this.getFullName() }, Age: ${ this.age }, Company: ${ Person.company }, Info: ${ Person.info() }";
   }
   
 }
