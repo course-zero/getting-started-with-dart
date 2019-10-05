@@ -1,5 +1,3 @@
-// Look at MaterialApp constructor
-
 /**
  * An `assertion` is a `check` to verify if a `value` is what it supposed to be.
  * Using assertion, we can avoid a `disaster` caused by a bad `value` and

@@ -1,6 +1,6 @@
 /**
  * Like JavaScript promises, `then` and `catchError` method also return another `Future` object.
- * The individual callback function passed to `then` and `catchError` method act as an `invoker` function.
+ * The individual callback function passed to `then` and `catchError` method act as an `executor` function.
  * Using these principles, it is possible to chain a `then` method on another `then` method.
  *
  * Then chaining is used to perform asynchronous jobs in series.
@@ -9,7 +9,7 @@
  */
 void main() {
 
-  // create future object that executes the `invoker` function after `3` seconds
+  // create future object that executes the `executor` function after `3` seconds
   Future<String> future = Future.delayed( Duration(seconds: 3), () => "Hello from the future" );
   
   // listen to `Future` object
@@ -23,7 +23,7 @@ void main() {
   .then( (result_of_1) => "$result_of_1: then_2" )
   
   // executes when previous `then` method returns a value (resolves)
-  // 3. return a `Future` object but throws an exception in the `invoker` function
+  // 3. return a `Future` object but throws an exception in the `executor` function
   .then( (result_of_2) {
     print( 'result in then_3: $result_of_2' );
     throw FormatException( 'Something went wrong in then method 3.' );

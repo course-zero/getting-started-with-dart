@@ -1,5 +1,5 @@
 /**
- * An `invoker` function can also return another `Future` object.
+ * An `executor` function can also return another `Future` object.
  * In that case, original `Future` object is not resolved until returned `Future` object resolves.
  *
  * When returned `Future` object is resolved, main `Future` object is also resolved.
@@ -7,7 +7,7 @@
  */
 void main() {
 
-  // create `Future` object with an `invoker` that returns another `Future` object
+  // create `Future` object with an `executor` that returns another `Future` object
   Future<String> future = Future( () {
 
     // return `Future` object that returns a `String` object

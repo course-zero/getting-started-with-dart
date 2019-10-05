@@ -5,6 +5,10 @@ import 'package:meta/meta.dart';
  * 
  * A class is `immutable` if all of the instance fields of the class,
  * whether defined directly or inherited, are `final`.
+ * 
+ * If a sub-class inherits a super-class which is marked `@immutable`,
+ * then sub-class is becomes immutable. Hence, any classes inherits from the sub-class
+ * are also immutable. Therefore, all instance variables on these classes should be `final`.
  */
 @immutable
 class User{
