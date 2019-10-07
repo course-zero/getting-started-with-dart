@@ -5,7 +5,7 @@ import 'dart:io';
 void main() {
 
 	// find all `.dart` files
-	var match = Glob( '**/*.dart' );
+	var match = Glob( 'K.advanced-topics/*.dart' );
 
 	// get list of files
 	var files = match.listSync();

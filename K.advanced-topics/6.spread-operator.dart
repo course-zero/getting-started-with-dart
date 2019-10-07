@@ -37,7 +37,7 @@ void example_two() {
   // `where` returns an Iterable object.
   List<int> numbers_filtered_old = numbers.where( ( number ) => number % 2 == 0 ).toList();
 
-  // creating a filtered list (old way)
+  // creating a filtered list (new way)
   List<int> numbers_filtered_new = [ ...numbers.where( ( number ) => number % 2 == 0 ) ];
 
   print( "example_one_old :=> $numbers_filtered_old"  );
