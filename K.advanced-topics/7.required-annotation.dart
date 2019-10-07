@@ -2,10 +2,10 @@ import 'package:meta/meta.dart';
 
 /**
  * By default, all named arguments of a function are optional
- * and their default value if not provided is `null`.
+ * and their default values, if not provided, are `null`.
  * 
- * Using `@required` annotation from `meta` package, named parameters can be marked required.
- * We just need to place it before parameter declaration.
+ * Using `@required` annotation from the `meta` package, named parameters can be marked required.
+ * We just need to place it before the parameter declaration.
  * 
  * This also works for a shorthand constructor syntax.
  */

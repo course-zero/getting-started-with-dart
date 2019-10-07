@@ -1,12 +1,12 @@
 /**
- * An `assertion` is a `check` to verify if a `value` is what it supposed to be.
+ * An `assertion` is a `check` to verify if a `value` is what it's supposed to be.
  * Using assertion, we can avoid a `disaster` caused by a bad `value` and
  * terminate the program by throwing an error before that `value` is consumed.
  * 
- * Dart provides `assert` function which takes a value or an expression and optional error message.
+ * Dart provides `assert` function which takes a value or expression and an optional error message.
  * If the value or the expression evaluates to false, it throws `AssertionError` and terminates the program.
  * 
- * Dart do not evaluate assertions in `Production` mode.
+ * Dart does not evaluate assertions in `Production` mode.
  * If you are using Flutter, assertions are evaluated in `Debug` mode.
  * If you are using `dart` CLI, use `--enable-asserts` flag to enable assertions.
  * For example, `dart --enable-asserts <file-name>`.

@@ -2,14 +2,14 @@
  * An `enumeration` or enum is an object of type `enum` that holds constant values.
  * 
  * An enum object can be related to a class with compile-time constant static properties.
- * The value of these properties is initialized Dart at compile time.
+ * The value of these properties is initialized by Dart at compile time.
  * 
- * Each value in an enum has an index and can be access using `index` property on the value.
+ * Each value in an enum has an index and can be accessed using `index` property on the value.
  * To get all entries of an enum, we use `values` property on the enum object.
  * 
  * Enumerations are used widely to create a collection of constant values.
- * But since a value in an enum does not represent a definite data type,
- * their use is limited to comaparisons only and not for data storage.
+ * But since the value in an enum does not represent a definite Data Type,
+ * their use is limited to comparisons only and not for the data storage.
  */
 enum Colors {
   blue,    // index 0

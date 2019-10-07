@@ -14,14 +14,21 @@ import 'package:meta/meta.dart';
 class User{
   final String name;
   
+  // an immutable class must use initializer (shorthand) syntax for the constructor
   User( this.name );
+
+  // constructor can have optional body, but instance variables can not be reassigned
+  User.withLog( this.name ) {
+    print( 'User created with name: ${ this.name }' );
+  }
+
 }
 
 // execute program
 void main() {
 
   // create a `User` object
-  var u = User( 'John' );
+  var u = User.withLog( 'John Doe' );
   
   // override name property
   //u.name = 'Mike'; // not allowed because `User` is `immutable`.

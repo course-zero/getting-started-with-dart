@@ -4,20 +4,20 @@ import 'package:uuid/uuid.dart';
 var uuidGenerator = Uuid();
 
 /**
- * A `factory function` is function that returns an instance of a class.
- * Dart provides `factory` keyword to label a default constructor.
+ * A `factory function` is a function that returns an instance of a class.
+ * Dart provides `factory` keyword to label a default or named constructor.
  * Then it becomes our responsibility to return an instance from this constructor.
  * 
  * A factor constructor is generally used to control the instance creation.
  * For example, we can cache an instance of the class and return the same instance
- * when user is trying to create new object.
+ * when a user is trying to create new object.
  */
 class Person {
   int id;
   String name;
   String uuid; // A random identifier to represent unique instance
 
-  // `cache` map contains instances of the `Person` class labeled by `id` field.
+  // `cache` map contains instances of the `Person` class labeled by `id` field
   // `final` protects `_cache` from being overridden accidentally
   static final Map<int, Person> _cache = {};
 

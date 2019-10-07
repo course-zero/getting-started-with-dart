@@ -1,6 +1,6 @@
 /**
  * A spread operator `...` (three-dots) when placed before a List or a Set or an Iterable,
- * laids out individual elements of that collection.
+ * laid out individual elements of that collection.
  * 
  * Spread operator is relatively new to Dart and it is supported in v2.3 and beyond.
  */

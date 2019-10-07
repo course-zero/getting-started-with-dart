@@ -2,18 +2,15 @@
  * Dart empowers `class` to create compile-time constant objects.
  * 
  * If a class has `final` fields, these fields are initialized at runtime but later can not be modified.
- * When multiple objects are created from this class by passing the same arguments to the constructor,
+ * When multiple objects are created from this class, like by passing the same arguments to the constructor,
  * a new instance of the class is created every single time.
  * 
  * We can create a constant constructor by placing `const` keyword before it.
- * Using constant constructors, a compile-time constant object is created by placing
- * `const` keyword before the class instatiation syntax.
+ * Using constant constructors, a compile-time constant object is created.
+ * Const constructors are used to create canonicalized instances,
+ * which means a class instantiation with the same arguments will return the old instance from the memory.
  * 
- * Using the same principle, we are able create create compile-time constant List, Set and Map.
- * 
- * 🔥 Use:
- * 1. Const constructors creates canonicalized instances.
- * __ Which means class instantiation with the same arguments will reuse old instance.
+ * Using the same principle, we are able to create compile-time constant List, Set and Map.
  */
 
 
